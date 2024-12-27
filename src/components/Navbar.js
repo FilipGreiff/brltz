@@ -13,14 +13,14 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-secondary/90 backdrop-blur-sm shadow-md fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <img
-                className="h-12 w-auto"
-                src="/logo.png"
+                className="h-full w-92"
+                src="/logo.jpg"
                 alt="Bröderna Lantz"
               />
             </Link>
@@ -32,7 +32,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-primary hover:text-secondary font-medium transition-colors"
+                className="text-white hover:text-primary font-medium transition-colors"
               >
                 {item.name}
               </Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
           <div className="flex items-center sm:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-primary p-2"
+              className="text-white p-2"
             >
               {isOpen ? (
                 <XMarkIcon className="h-6 w-6" />
@@ -63,7 +63,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 text-primary hover:bg-secondary/10"
+                className="block px-3 py-2 text-white hover:bg-primary/10"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
